@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+{% block content %}
+<div class="container-fluid mt-5" style="margin-bottom:100px;">
+  <center>
+    <h3 class="text-center text-danger">{{m}}</h3>
+    <h5 class="text-center text-danger">THANK YOU FOR SHOPPING WITH US</h5>
+    <h6><a href="{% url 'shop:allocate' %}">CONTINUE SHOPPING</a></h6>
+
+
+  </center>
+  </div>
+{% endblock %}
+
