@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row" style="padding:50px">
+    <div class="col-sm-4">
+        <img src="{{n.image.url}}" height="300px" width="250px" style="margin-left:100px;">
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="height:300px;width:400px;" >
+            <div class="card-body">
+    <center><h5 class="card-title" style="font-weight:bold;">{{n.name}}</h5></center>
+
+    <center><p class="card-text" style="text-align:justify">{{n.des}}</p></center>
+
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+    <a href="{% url 'movies:edit' n.name %}" class="btn btn-danger">Edit</a>
+    <a href="{% url 'movies:delete' n.name %}" class="btn btn-danger">Delete</a></div>
+        </div>
+{% endblock %}

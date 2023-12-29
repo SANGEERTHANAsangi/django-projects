@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="mb-3">
+    <label  class="form-label"> Movie name</label>
+    <input type="text" class="form-control" name="n" placeholder="enter the movie name">
+
+  </div>
+
+    <div class="mb-3">
+    <label class="form-label">Description</label>
+    <input type="text" class="form-control" name="d" placeholder="enter the description">
+  </div>
+  <div class="mb-3">
+  <label  class="form-label">Image</label>
+  <input type="file" class="form-control" name="i">
+</div>
+  <div class="mb-3">
+    <label class="form-label">Submit</label>
+    <input type="submit" class="form-control">
+  </div>
+
+</form>
+{% endblock %}
